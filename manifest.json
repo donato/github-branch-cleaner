@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Github Branch Cleaner",
+  "description": "This extension will help you delete old branches",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "ms-icon-70x70.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["gbc.js"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab"
+  ]
+}
